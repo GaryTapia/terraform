@@ -6,7 +6,7 @@ resource "aws_instance" "dontstarvetogether_ubuntu" {
     subnet_id = "${aws_subnet.main-public-1.id}"
 
     #Security Group
-    vpc_security_group_ids = ["${aws_security_group.allow-ssh.id}"]
+    vpc_security_group_ids = ["${aws_security_group.DST-Ports.id}"]
 
 
     #Public SSH key
